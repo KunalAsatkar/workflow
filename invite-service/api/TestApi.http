@@ -1,0 +1,20 @@
+### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=IntelliJ IDEA
+
+###
+
+GET localhost:8083/invite/hello
+
+###
+
+POST localhost:8083/invite/1
+Content-Type: application/json
+
+kunalasatkar@gmail.com
+
+###
+
+GET localhost:8083/invite/accept?token=8419d44b-10fc-4e04-9ef5-f846f000d374
+
+###

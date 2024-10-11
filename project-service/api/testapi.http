@@ -1,0 +1,69 @@
+### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=IntelliJ IDEA
+
+###
+
+GET localhost:8082/project/hello
+
+###
+
+POST localhost:8082/project/create
+Content-Type: application/json
+
+{
+  "name": "heywood",
+  "description": "web",
+  "category": "xyz",
+  "projectLeadId": 1,
+  "tags": ["abc", "defj"]
+}
+
+
+###
+
+GET localhost:8082/project/1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdW5hbEBnbWFpbC5jb20iLCJpYXQiOjE3MjgxMTUyNjAsImV4cCI6MTcyODIwMTY2MH0.U0PXhQkzAXurV1O_eP0udX_mMvYHxBYFZ8IJm0GxjMD_j1ElGEJsox_HL-mjSdv5BKfqb6WSPJmO1Wo2JLlO2g
+
+###
+POST localhost:8082/issue/create/1?userId=1
+Content-Type: application/json
+
+{
+  "title": "navvbar",
+  "description": "create a responsive navbar",
+  "status": "pending",
+  "dueDate": "2024-10-06",
+  "priority": "high"
+}
+
+###
+GET localhost:8082/issue/1
+Authorization: xxxxxxx
+
+###
+GET localhost:8082/issue/project/1
+Authorization: xxxxxxx
+
+###
+PUT localhost:8082/issue/1/assign
+Authorization: xxxxxxx
+
+###
+//comment service
+POST localhost:8082/comment/create?userId=1
+Content-Type: application/json
+
+{
+  "content": "this is the 2 comment",
+  "issueId": 1
+}
+
+###
+GET localhost:8082/comment/1
+
+
+
+
+
+

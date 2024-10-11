@@ -1,0 +1,56 @@
+### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=IntelliJ IDEA
+
+###
+
+GET localhost:8080/project/hello
+
+###
+
+GET localhost:8080/auth/user/hello
+
+###
+
+POST localhost:8080/auth/user/signup
+Content-Type: application/json
+
+{
+  "username": "asatkarkunal@gmail.com",
+  "firstName": "kunal",
+  "lastName": "asatkar",
+  "password": "password"
+}
+
+
+###
+
+POST localhost:8080/auth/user/login
+Content-Type: application/json
+
+{
+  "username": "asatkarkunal@gmail.com",
+  "password": "password"
+}
+
+###
+GET localhost:8080/auth/user/validate
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc2F0a2Fya3VuYWxAZ21haWwuY29tIiwiaWF0IjoxNzI4MTI1OTI4LCJleHAiOjE3MjgyMTIzMjh9.CBoU0h_EA2TD-2snN8zhzIGcAhrDmZjw6ysMaHB1UXxd_YUVHmVcjLVdGx6ZvR5m3GAYNxKKPx6GSiH9FO8HvA
+###
+
+GET localhost:8080/project/hello
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc2F0a2Fya3VuYWxAZ21haWwuY29tIiwiaWF0IjoxNzI4MTI1OTI4LCJleHAiOjE3MjgyMTIzMjh9.CBoU0h_EA2TD-2snN8zhzIGcAhrDmZjw6ysMaHB1UXxd_YUVHmVcjLVdGx6ZvR5m3GAYNxKKPx6GSiH9FO8HvA
+
+###
+POST localhost:8080/project/create
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc2F0a2Fya3VuYWxAZ21haWwuY29tIiwiaWF0IjoxNzI4MTI1OTI4LCJleHAiOjE3MjgyMTIzMjh9.CBoU0h_EA2TD-2snN8zhzIGcAhrDmZjw6ysMaHB1UXxd_YUVHmVcjLVdGx6ZvR5m3GAYNxKKPx6GSiH9FO8HvA
+Content-Type: application/json
+
+{
+  "name": "workflow",
+  "category": "backend",
+  "description": "this is a pms",
+  "tags": ["java", "spring boot", "postgresql"],
+  "projectLeadId": 1
+
+}
